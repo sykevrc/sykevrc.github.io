@@ -1,0 +1,1 @@
+Jekyll is weird, AI is helpful, college essays are boring, and I'm going to go back and post so many projects
