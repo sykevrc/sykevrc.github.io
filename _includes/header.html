@@ -1,34 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/utils.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/blogpost.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <title>Johnson Wei - My Projects</title>
-</head>
-<body>
-    <nav class="navigation max-width-1 m-auto">
-        <div class="nav-left">
-            <a href="/">
-                <span><img src="img/headshot.png" width="94px" alt=""></span>
-            </a>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="nav-right">
-            <form action="/search.html" method="get">
-                <input class="form-input" type="text" name="query" placeholder="Article Search">
-                <button class="btn">Search</button>
-            </form>
-
-        </div>
-
-    </nav>
-</body>
-</html>
+<header class="site-header">
+  <nav class="navigation max-width-1 m-auto">
+    <div class="nav-left">
+      <a class="site-brand" href="{{ '/' | relative_url }}">
+        {% if site.logo %}<img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" width="64" height="64">{% else %}<span>{{ site.title }}</span>{% endif %}
+      </a>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+      </ul>
+    </div>
+    <form class="nav-search" action="{{ '/search.html' | relative_url }}" method="get">
+      <input class="form-input" type="search" name="query" placeholder="Search">
+      <button class="btn" type="submit">Search</button>
+    </form>
+  </nav>
+</header>

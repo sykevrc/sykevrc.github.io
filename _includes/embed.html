@@ -1,0 +1,6 @@
+<figure class="media media-embed {% if include.class %}{{ include.class }}{% endif %}">
+  <div class="embed-frame">
+    <iframe src="{{ include.src }}" title="{{ include.title | default: "Embedded content" | escape }}" loading="lazy" allowfullscreen {% if include.allow %}allow="{{ include.allow }}"{% endif %}></iframe>
+  </div>
+  {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

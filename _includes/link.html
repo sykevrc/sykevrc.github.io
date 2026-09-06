@@ -1,0 +1,6 @@
+<p class="media-link">
+  <a class="external-link" href="{{ include.url }}" target="_blank" rel="noopener noreferrer">
+    <strong>{{ include.title | default: include.url }}</strong>
+    {% if include.description %}<span>{{ include.description }}</span>{% endif %}
+  </a>
+</p>

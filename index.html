@@ -2,27 +2,35 @@
 layout: default
 title: Home
 ---
+<section class="hero max-width-1 m-auto">
+  <div>
+    <p class="eyebrow">ENGINEERING • ROBOTICS • SCIENCE</p>
+    <h1>Projects, experiments, and things I build.</h1>
+    <p>{{ site.description }}</p>
+  </div>
+</section>
 
-<h2>Latest Posts</h2>
+<section id="projects" class="home-articles max-width-1 m-auto">
+  <div class="section-heading">
+    <h2>Latest Posts</h2>
+    <p>Build logs, experiments, research, and technical write-ups.</p>
+  </div>
 
-<p>
-Welcome to my engineering portfolio and blog.
-</p>
-
-<ul>
-
-{% for post in site.posts %}
-
-<li>
-
-<a href="{{ post.url }}">
-{{ post.title }}
-</a>
-
-<small>{{ post.date | date: "%B %d, %Y" }}</small>
-
-</li>
-
-{% endfor %}
-
-</ul>
+  {% for post in site.posts %}
+  <article class="home-article">
+    {% if post.image %}
+      <a href="{{ post.url | relative_url }}" class="home-article-img">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy">
+      </a>
+    {% endif %}
+    <div class="home-article-content">
+      <p class="post-category">{{ post.category | default: "Engineering" }}</p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <small>{{ post.date | date: "%B %d, %Y" }}{% if post.read_time %} · {{ post.read_time }} min read{% endif %}</small>
+    </div>
+  </article>
+  {% else %}
+    <p>No posts yet. Add a Markdown file to <code>_posts/</code>.</p>
+  {% endfor %}
+</section>

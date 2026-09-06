@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="post">
+  {% if page.image %}
+    <figure class="post-hero">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
+    </figure>
+  {% endif %}
+
+  <header class="post-header max-width-2 m-auto">
+    <p class="post-category">{{ page.category | default: "Engineering" }}</p>
+    <h1>{{ page.title }}</h1>
+    <div class="blogpost-meta">
+      <div class="author-info">
+        <div><strong>{{ page.author | default: site.author | default: "Johnson Wei" }}</strong></div>
+        <div>
+          {{ page.date | date: "%B %d, %Y" }}
+          {% if page.read_time %} · {{ page.read_time }} min read{% endif %}
+        </div>
+      </div>
+      {% if page.tags %}
+      <div class="post-tags">
+        {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content max-width-2 m-auto">
+    {{ content }}
+  </div>
+</article>

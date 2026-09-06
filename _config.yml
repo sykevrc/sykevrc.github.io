@@ -1,3 +1,29 @@
-theme: minima
-title: My Projects
-description: A clean, modern Jekyll blog
+title: Johnson Wei
+description: Engineering projects, robotics, science, and things I build
+url: ""
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - vendor
+  - Gemfile
+  - Gemfile.lock

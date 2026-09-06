@@ -1,63 +1,12 @@
-@media screen and (max-width: 1200px) {
-  .navigation {
-    flex-direction: column;
-    margin-bottom: 23px;
-  }
-
-  .nav-left {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .content-right {
-    display: none;
-  }
-
-  .home-article {
-    flex-direction: column;
-  }
-
-  .home-article-img {
-    text-align: center;
-  }
-
-  .year-box {
-    top: 25px;
-    left: 60vw;
-    font-size: 11px;
-    display: flex;
-  }
-
-  .year-box div {
-    padding: 0 3px;
-    margin: 0;
-  }
-
-  .home-article img {
-    width: 70vw;
-  }
-  .form-input {
-    width: 50%;
-  }
-  .form-box input,
-  textarea {
-    width: 66vw;
-  }
-  .row {
-    flex-direction: column;
-  }
-  .social {
-    padding: 0;
-  }
-  .post-img {
-    height: auto;
-  }
-  .adjust-year {
-    position: static;
-    height: auto;
-    padding: 12px 0px;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-  }
+@media (max-width: 760px) {
+  .navigation { flex-direction: column; padding: 16px 0; }
+  .nav-left { flex-direction: column; gap: 12px; }
+  .nav-left ul { gap: 14px; font-size: 16px; }
+  .nav-search { width: 100%; }
+  .form-input { flex: 1; width: auto; }
+  .hero { padding: 40px 25px; min-height: 300px; }
+  .home-article { flex-direction: column; }
+  .home-article-img { flex-basis: auto; }
+  .home-article img { height: auto; max-height: 300px; }
+  .blogpost-meta { align-items: flex-start; flex-direction: column; }
 }
