@@ -1,4 +1,4 @@
-# Johnson Wei Engineering Blog
+# My Engineering Blog
 
 Jekyll-powered GitHub Pages site.
 
@@ -10,7 +10,7 @@ Create `_posts/YYYY-MM-DD-title.md` with front matter:
 ---
 title: "My Project"
 date: 2026-09-05
-author: "Johnson Wei"
+author: "John Doe"
 category: "Robotics"
 tags: [VEX, PROS]
 read_time: 6
